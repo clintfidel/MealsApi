@@ -1,0 +1,34 @@
+{
+  "name": "clintfidel",
+  "version": "1.0.0",
+  "description": "Meals",
+  "main": "index.js",
+  "repository": "",
+  "author": "Clintfidel",
+  "license": "MIT",
+  "node": "10.13.0",
+  "yarn": "1.12.1",
+  "scripts": {
+    "test": "NODE_ENV=test mocha tests --recursive --exit",
+    "server": "nodemon --exec babel-node server.js",
+    "start": "node ./dist/server.js",
+    "build": "babel server.js -d dist",
+    "lint": "eslint ./ || true"
+  },
+  "dependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.4.0",
+    "@babel/preset-env": "^7.4.2",
+    "cors": "^2.8.5",
+    "dotenv": "^7.0.0",
+    "eslint": "^5.15.3",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.16.0",
+    "express": "^4.16.4",
+    "nodemon": "^1.18.10",
+    "winston": "^3.2.1"
+  },
+  "devDependencies": {
+    "@babel/node": "^7.2.2"
+  }
+}
