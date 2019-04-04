@@ -30,7 +30,6 @@ const getTotalIngredientsAndId = (meals: any) => {
 
 export const getAllMealWithLeastIngredients = async (req: any, res: any) => {
   try {
-
     const { mealIds } = req.body;
     const result = mealIds.map((id: number) => {
       return axios.get(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`);

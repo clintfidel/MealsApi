@@ -10,8 +10,8 @@
   "yarn": "1.12.1",
   "scripts": {
     "test": "NODE_ENV=test mocha tests --recursive --exit",
-    "server": "nodemon --exec tsc server.ts",
-    "start": "yarn build && nodemon ./dist/server.js",
+    "server": "yarn build && nodemon ./dist/server.js",
+    "start": "yarn build && ./dist/server.js",
     "build": "tsc"
   },
   "dependencies": {

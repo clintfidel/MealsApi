@@ -42,10 +42,10 @@ exports.getAllMealWithLeastIngredients = (req, res) => __awaiter(this, void 0, v
         const results = yield Promise.all(result);
         const meals = yield normalizeMeals(results.map((result) => result.data));
         const leastIngredient = yield getTotalIngredientsAndId(meals);
-        console.log(leastIngredient);
         return res.status(200).send(leastIngredient.mealId);
     }
     catch (error) {
+        return error;
     }
 });
 //# sourceMappingURL=meal.js.map
