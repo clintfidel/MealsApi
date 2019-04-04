@@ -10,25 +10,37 @@
   "yarn": "1.12.1",
   "scripts": {
     "test": "NODE_ENV=test mocha tests --recursive --exit",
-    "server": "nodemon --exec babel-node server.js",
-    "start": "node ./dist/server.js",
-    "build": "babel server.js -d dist",
-    "lint": "eslint ./ || true"
+    "server": "nodemon --exec tsc server.ts",
+    "start": "yarn build && nodemon ./dist/server.js",
+    "build": "tsc"
   },
   "dependencies": {
     "@babel/cli": "^7.2.3",
     "@babel/core": "^7.4.0",
     "@babel/preset-env": "^7.4.2",
+    "@types/axios": "^0.14.0",
+    "@types/body-parser": "^1.17.0",
+    "@types/cors": "^2.8.4",
+    "@types/express": "^4.16.1",
+    "@types/node-fetch": "^2.1.7",
+    "axios": "^0.18.0",
+    "body-parser": "^1.18.3",
     "cors": "^2.8.5",
     "dotenv": "^7.0.0",
-    "eslint": "^5.15.3",
-    "eslint-config-airbnb-base": "^13.1.0",
-    "eslint-plugin-import": "^2.16.0",
     "express": "^4.16.4",
+    "global": "^4.3.2",
+    "node-fetch": "^2.3.0",
     "nodemon": "^1.18.10",
+    "tslint": "^5.15.0",
     "winston": "^3.2.1"
   },
   "devDependencies": {
-    "@babel/node": "^7.2.2"
+    "@babel/node": "^7.2.2",
+    "@typescript-eslint/eslint-plugin": "^1.6.0",
+    "@typescript-eslint/parser": "^1.6.0",
+    "ts-loader": "^5.3.3",
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.3.0",
+    "webpack-dev-server": "^3.2.1"
   }
 }
